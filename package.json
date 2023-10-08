@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:next": "next lint",
+    "lint:js": "eslint --ext \".js,.jsx,.ts,.tsx\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint:style": "stylelint **/*.{css,scss}",
+    "lint-staged": "lint-staged",
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "13.5.4",
@@ -23,6 +30,9 @@
     "eslint": "^8.51.0",
     "eslint-config-next": "13.5.4",
     "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
     "sass": "^1.69.0",
     "stylelint": "^15.10.3",
