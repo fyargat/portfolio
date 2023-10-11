@@ -1,7 +1,15 @@
+import { Header } from '@/components/Header';
+import { IntroScreen } from '@/components/IntroScreen';
+
 export default function Home() {
   return (
-    <main>
-      <h1>Portfolio</h1>
-    </main>
+    <>
+      <Header />
+      <main>
+        <IntroScreen />
+        <div style={{ height: '100vh', backgroundColor: 'tomato' }} />
+        <div style={{ height: '100vh', backgroundColor: 'blue' }} />
+      </main>
+    </>
   );
 }

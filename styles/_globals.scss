@@ -1,5 +1,60 @@
-:root,
-::before,
-::after {
+* {
   box-sizing: border-box;
+}
+
+:root {
+  @each $name, $color in $colors {
+    --color-#{"" + $name}: #{$color};
+  }
+
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-cabin), sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-black);
+
+  background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.wrap {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
