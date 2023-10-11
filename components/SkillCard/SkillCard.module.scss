@@ -1,0 +1,28 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.container {
+  display: flex;
+  perspective: 800px;
+}
+
+.innerContainer {
+  @include flex-column;
+
+  @include breakpoint(tablet) {
+    transition: transform 0.3s ease-out;
+
+    &:hover {
+      transform: rotateX(var(--x-rotation)) rotateY(var(--y-rotation))
+        scale(1.01);
+    }
+  }
+
+  flex: 1;
+
+  width: 330px;
+  height: 500px;
+
+  background-color: var(--color-black);
+  border-radius: 10px;
+}
