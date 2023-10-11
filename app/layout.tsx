@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
+import { Cabin } from 'next/font/google';
 
 import '@/styles/index.scss';
 
+const cabin = Cabin({
+  weight: ['400', '500', '700'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'Portfolio',
+  title: 'Fyargat Bikbaev',
 };
 
 export default function RootLayout({
@@ -14,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body className={cabin.className}>{children}</body>
     </html>
   );
 }
