@@ -1,0 +1,15 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 330px;
+  height: 500px;
+  margin: 16px 0 30px;
+  padding: 10px 8px 40px;
+
+  background-color: var(--color-black);
+  border-radius: 10px;
+}
