@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header';
 import { IntroScreen } from '@/components/IntroScreen';
+import { ProjectsScreen } from '@/components/ProjectsScreen';
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <Header />
       <main>
         <IntroScreen />
-        <div style={{ height: '100vh', backgroundColor: 'tomato' }} />
+        <ProjectsScreen />
         <div style={{ height: '100vh', backgroundColor: 'blue' }} />
       </main>
     </>
