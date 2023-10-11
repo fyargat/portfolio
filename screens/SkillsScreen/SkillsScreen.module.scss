@@ -1,0 +1,10 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.container {
+  @include section-container(lightgrey);
+}
+
+.title {
+  @include section-title;
+}
