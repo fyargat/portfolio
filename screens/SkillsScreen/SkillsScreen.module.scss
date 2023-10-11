@@ -7,4 +7,22 @@
 
 .title {
   @include section-title;
+
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.item {
+  margin: 0 auto;
+
+  &Title {
+    @include section-subtitle;
+
+    text-align: center;
+  }
 }
