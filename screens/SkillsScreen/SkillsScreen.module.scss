@@ -23,6 +23,7 @@
   &Title {
     @include section-subtitle;
 
+    margin-bottom: clamp(0.5rem, 2vw, 1.25rem);
     text-align: center;
   }
 }
