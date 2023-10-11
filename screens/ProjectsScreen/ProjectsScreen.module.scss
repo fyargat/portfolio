@@ -2,15 +2,11 @@
 @import '@/styles/mixins';
 
 .container {
-  min-height: 100vh;
-  padding: 2rem 0;
-  background-color: var(--color-lightgrey);
+  @include section-container(lightgrey);
 }
 
 .title {
-  margin-bottom: clamp(1rem, 3vw, 1.5rem);
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 700;
+  @include section-title;
 }
 
 .projects {
