@@ -1,0 +1,30 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.container {
+  @include section-container(white);
+
+  @include breakpoint(tablet) {
+    max-width: 60rem;
+    min-height: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.title {
+  @include section-title;
+}
+
+.textContainer {
+  &:not(:last-of-type) {
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  }
+}
+
+.text {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  line-height: 1.75;
+  text-align: justify;
+  text-indent: 0.5rem;
+  letter-spacing: 0.0125rem;
+}

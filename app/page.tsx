@@ -1,6 +1,8 @@
 import { Header } from '@/components/Header';
-import { IntroScreen } from '@/components/IntroScreen';
-import { ProjectsScreen } from '@/components/ProjectsScreen';
+
+import { AboutScreen } from '@/screens/AboutScreen';
+import { IntroScreen } from '@/screens/IntroScreen';
+import { ProjectsScreen } from '@/screens/ProjectsScreen';
 
 export default function Home() {
   return (
@@ -9,7 +11,8 @@ export default function Home() {
       <main>
         <IntroScreen />
         <ProjectsScreen />
-        <div style={{ height: '100vh', backgroundColor: 'blue' }} />
+        <AboutScreen />
+        <div style={{ height: '100vh', backgroundColor: 'lightblue' }} />
       </main>
     </>
   );
