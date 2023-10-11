@@ -1,0 +1,194 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.header {
+  @include breakpoint(tablet) {
+    position: relative;
+    z-index: 0;
+    padding-top: 1rem;
+  }
+
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  max-width: calc(1280px + 2rem);
+  margin: 0 auto;
+}
+
+.container {
+  @include breakpoint(tablet) {
+    height: 4rem;
+    box-shadow: none;
+  }
+
+  overflow: hidden;
+  display: flex;
+
+  width: 100%;
+  height: 3.5rem;
+
+  background-color: var(--color-white);
+  box-shadow:
+    0 1px 0 1px rgb(0 0 0 / 2%),
+    0 4px 16px rgb(0 0 0 / 9%);
+
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.wrap {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  flex: 1;
+
+  &List {
+    @include breakpoint(tablet) {
+      justify-content: flex-end;
+    }
+
+    display: flex;
+    flex: 1;
+    gap: clamp(0.5rem, 4vw, 2rem);
+    align-items: center;
+  }
+
+  &Item {
+    display: flex;
+    align-items: center;
+  }
+
+  &InteractiveElem {
+    @include breakpoint(tablet) {
+      font-size: 1.25rem;
+    }
+
+    position: relative;
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 0;
+      height: 0.125rem;
+
+      background-color: var(--color-black);
+
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      &::before {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &Mobile {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &Desktop {
+    @include breakpoint(tablet) {
+      display: block;
+      max-width: fit-content;
+    }
+
+    display: none;
+  }
+}
+
+.logo {
+  font-size: 1.125rem;
+  font-weight: 500;
+
+  &Mobile {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &Desktop {
+    @include breakpoint(tablet) {
+      display: block;
+      font-size: 1.25rem;
+    }
+
+    display: none;
+  }
+}
+
+.menu {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-end;
+
+  width: 1.625rem;
+  height: 0.9375rem;
+
+  &Line {
+    width: 100%;
+    height: 0.125rem;
+    margin-left: auto;
+
+    background-color: var(--color-black);
+
+    transition: all 0.2s ease-in-out;
+
+    &:nth-of-type(2) {
+      width: 1.125rem;
+    }
+  }
+}
+
+.headerOpen {
+  .menuLine {
+    &:first-of-type {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    &:last-of-type {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  }
+}
+
+.headerFixed {
+  position: fixed;
+  z-index: 99;
+  top: 1rem;
+  right: 0;
+  left: 0;
+
+  padding: 0;
+
+  .container {
+    box-shadow:
+      0 1px 0 1px rgb(0 0 0 / 2%),
+      0 4px 16px rgb(0 0 0 / 9%);
+  }
+}
