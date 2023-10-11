@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header';
-import { IntroScreen } from '@/components/IntroScreen';
-import { ProjectsScreen } from '@/components/ProjectsScreen';
+
+import { IntroScreen } from '@/screens/IntroScreen';
+import { ProjectsScreen } from '@/screens/ProjectsScreen';
 
 export default function Home() {
   return (
