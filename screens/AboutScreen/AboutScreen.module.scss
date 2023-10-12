@@ -5,8 +5,13 @@
   @include section-container(white);
 
   @include breakpoint(tablet) {
-    max-width: 60rem;
     min-height: fit-content;
+  }
+}
+
+.wrapper {
+  @include breakpoint(tablet) {
+    max-width: 60rem;
     margin: 0 auto;
   }
 }

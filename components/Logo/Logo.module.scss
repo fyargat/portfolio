@@ -1,0 +1,25 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+$size: 50px;
+
+.container {
+  @include flex-center;
+
+  width: $size;
+  height: $size;
+  background-color: var(--color-black);
+  border-radius: 8px;
+}
+
+.iconContainer {
+  @include flex-center;
+
+  width: $size / 2;
+  height: $size / 2;
+
+  svg {
+    width: auto;
+    max-height: 100%;
+  }
+}
