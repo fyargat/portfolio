@@ -12,12 +12,12 @@ const getRectVariants = (width: number) => ({
   visible: { width },
 });
 
-const animationDuration = 0.5;
+const animationDuration = 0.7;
 
 export const Logo: FC<IProps> = () => {
   const ref = useRef<HTMLDivElement | null>(null);
 
-  const isInView = useInView(ref, {});
+  const isInView = useInView(ref, { once: true });
 
   const controls = useAnimation();
 
@@ -52,7 +52,9 @@ export const Logo: FC<IProps> = () => {
           >
             <motion.rect
               variants={getRectVariants(196)}
-              transition={{ delay: animationDuration * 2 - 0.1 }}
+              transition={{
+                delay: animationDuration * 2 - 0.1,
+              }}
               initial='hidden'
               animate={controls}
               width='196'
@@ -61,7 +63,9 @@ export const Logo: FC<IProps> = () => {
             />
             <motion.rect
               variants={getRectVariants(177)}
-              transition={{ delay: animationDuration - 0.1 }}
+              transition={{
+                delay: animationDuration - 0.1,
+              }}
               initial='hidden'
               animate={controls}
               y='109'
