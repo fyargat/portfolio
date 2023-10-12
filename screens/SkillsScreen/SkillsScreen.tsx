@@ -3,6 +3,11 @@ import { FC } from 'react';
 import { SkillCard } from '@/components/SkillCard';
 
 import { Screen } from '@/constants';
+import {
+  BACKEND_SKILLS,
+  FRONTEND_SKILLS,
+  MISCELLANEOUS_SKILLS,
+} from '@/constants/skills';
 
 import styles from './SkillsScreen.module.scss';
 
@@ -17,17 +22,17 @@ export const SkillsScreen: FC<IProps> = () => {
         <ul className={styles.list}>
           <li className={styles.item}>
             <h3 className={styles.itemTitle}>Front-end</h3>
-            <SkillCard />
+            <SkillCard skills={FRONTEND_SKILLS} />
           </li>
 
           <li className={styles.item}>
             <h3 className={styles.itemTitle}>Back-end</h3>
-            <SkillCard />
+            <SkillCard skills={BACKEND_SKILLS} />
           </li>
 
           <li className={styles.item}>
             <h3 className={styles.itemTitle}>Miscellaneous</h3>
-            <SkillCard />
+            <SkillCard skills={MISCELLANEOUS_SKILLS} />
           </li>
         </ul>
       </div>
