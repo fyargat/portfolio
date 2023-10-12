@@ -4,6 +4,8 @@ import cn from 'classnames';
 import { motion } from 'framer-motion';
 import { FC, useState } from 'react';
 
+import { Logo } from '@/components/Logo';
+
 import { Screen, TABLET_BREAKPOINT } from '@/constants';
 import { links } from '@/constants/header';
 import { MIN_SCROLL_Y_POSITION, ScrollYDirection } from '@/constants/scroll';
@@ -22,7 +24,7 @@ export const Header: FC<IProps> = () => {
   const scrollY = useScrollY();
   const screenWidth = useScreenWidth();
 
-  const isHeaderFixed =
+  const isHeaderDown =
     screenWidth >= TABLET_BREAKPOINT &&
     scrollY.direction === ScrollYDirection.Top &&
     scrollY.position !== MIN_SCROLL_Y_POSITION;
@@ -39,13 +41,14 @@ export const Header: FC<IProps> = () => {
     <header
       className={cn(styles.header, {
         [styles.headerOpen]: isOpen,
-        [styles.headerFixed]: isHeaderFixed,
+        [styles.headerDown]: isHeaderDown,
+        [styles.headerUp]: false,
       })}
     >
       <div className={styles.container}>
         <div className={cn('wrap', styles.wrap)}>
           <div className={cn(styles.logo, styles.logoDesktop)}>
-            <a>Fyargat Bikbaev</a>
+            <Logo />
           </div>
 
           <nav className={cn(styles.nav, styles.navDesktop)}>
@@ -94,7 +97,7 @@ export const Header: FC<IProps> = () => {
             </nav>
           ) : (
             <div className={cn(styles.logo, styles.logoMobile)}>
-              <a>Fyargat Bikbaev</a>
+              <Logo />
             </div>
           )}
 

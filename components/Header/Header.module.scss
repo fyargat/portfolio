@@ -13,7 +13,6 @@
   top: 0;
   left: 0;
 
-  max-width: calc(1280px + 2rem);
   margin: 0 auto;
 }
 
@@ -177,18 +176,31 @@
   }
 }
 
-.headerFixed {
+.headerDown {
   position: fixed;
   z-index: 99;
   top: 1rem;
   right: 0;
   left: 0;
+  transform: translateY(-50px);
 
   padding: 0;
+
+  animation: slide-down 0.3s ease-in-out both;
 
   .container {
     box-shadow:
       0 1px 0 1px rgb(0 0 0 / 2%),
       0 4px 16px rgb(0 0 0 / 9%);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
