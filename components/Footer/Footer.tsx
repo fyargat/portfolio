@@ -1,3 +1,5 @@
+import cn from 'classnames';
+import Image from 'next/image';
 import { FC } from 'react';
 
 import { Logo } from '@/components/Logo';
@@ -13,7 +15,17 @@ export const Footer: FC<IProps> = () => {
     <footer className={styles.container}>
       <div className='wrap'>
         <div className={styles.wrapper}>
-          <p className={styles.text}>Fyargat Bikbaev · {getCurrentYear()}</p>
+          <p className={cn(styles.text, styles.textCopyright)}>
+            <span className={styles.copyright}>
+              <Image
+                src='/icons/copyright.svg'
+                width={20}
+                height={20}
+                alt='copyright'
+              />
+            </span>
+            Fyargat Bikbaev · {getCurrentYear()}
+          </p>
           <div className={styles.logo}>
             <Logo />
           </div>
