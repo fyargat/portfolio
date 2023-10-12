@@ -24,7 +24,7 @@ export const ContactScreen: FC<IProps> = () => {
                   <Image
                     src='/icons/mail.svg'
                     width={50}
-                    height={35}
+                    height={38}
                     alt='mail icon'
                   />
                 </div>
