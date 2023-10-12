@@ -177,7 +177,7 @@ $mobile-height: 3.5rem;
   }
 }
 
-.headerOpen {
+.headerMobileOpen {
   .menuLine {
     &:first-of-type {
       transform: translateY(6px) rotate(45deg);
@@ -193,7 +193,7 @@ $mobile-height: 3.5rem;
   }
 }
 
-.headerDown {
+.headerDesktopVisible {
   position: fixed;
   z-index: $z-index;
   top: 1rem;

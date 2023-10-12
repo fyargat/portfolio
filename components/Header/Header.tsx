@@ -15,9 +15,8 @@ import styles from './Header.module.scss';
 interface IProps {}
 
 export const Header: FC<IProps> = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen((prev) => !prev);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
 
   const { visibilityStatus, onScroll } = useHeaderScroll();
 
@@ -25,9 +24,9 @@ export const Header: FC<IProps> = () => {
     <>
       <header
         className={cn(styles.header, {
-          [styles.headerOpen]: isOpen,
-          [styles.headerDown]: visibilityStatus === VisibilityStatus.Visible,
-          [styles.headerUp]: false,
+          [styles.headerMobileOpen]: isMobileMenuOpen,
+          [styles.headerDesktopVisible]:
+            visibilityStatus === VisibilityStatus.Visible,
         })}
       >
         <div className={styles.container}>
@@ -53,7 +52,7 @@ export const Header: FC<IProps> = () => {
               </ul>
             </nav>
 
-            {isOpen ? (
+            {isMobileMenuOpen ? (
               <nav className={cn(styles.nav, styles.navMobile)}>
                 <ul className={styles.navList}>
                   {links.map((v) => (
@@ -90,7 +89,7 @@ export const Header: FC<IProps> = () => {
               </div>
             )}
 
-            <button onClick={toggle} className={styles.menu}>
+            <button onClick={toggleMobileMenu} className={styles.menu}>
               <div className={styles.menuLine} />
               <div className={styles.menuLine} />
               <div className={styles.menuLine} />
