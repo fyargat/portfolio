@@ -19,10 +19,19 @@
   }
 
   flex: 1;
+  gap: 2.25rem;
 
   width: 330px;
   height: 500px;
+  padding: 2.25rem 1.5625rem;
 
-  background-color: var(--color-black);
+  background-color: var(--color-dark-grey);
   border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
 }

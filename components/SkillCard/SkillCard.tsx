@@ -2,11 +2,17 @@
 
 import { FC, useRef } from 'react';
 
+import { SkillElement } from '@/components/SkillElement';
+
+import { Skills } from '@/types';
+
 import styles from './SkillCard.module.scss';
 
-interface IProps {}
+interface IProps {
+  skills: Skills;
+}
 
-export const SkillCard: FC<IProps> = () => {
+export const SkillCard: FC<IProps> = ({ skills }) => {
   const boundingRef = useRef<DOMRect | null>(null);
 
   const handleMouseLeave = () => (boundingRef.current = null);
@@ -34,7 +40,15 @@ export const SkillCard: FC<IProps> = () => {
         onMouseLeave={handleMouseLeave}
         onMouseEnter={handleMouseEnter}
         onMouseMove={handleMouseMove}
-      ></div>
+      >
+        {skills.map((row, index) => (
+          <div key={index} className={styles.row}>
+            {row.map((skill) => (
+              <SkillElement key={skill.id} skill={skill} />
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
