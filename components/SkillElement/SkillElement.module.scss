@@ -1,0 +1,15 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.container {
+  @include flex-center;
+
+  width: 5rem;
+  height: 5rem;
+
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  box-shadow:
+    6px 6px 12px 0 #181818,
+    -6px -6px 12px 0 #202020;
+}
