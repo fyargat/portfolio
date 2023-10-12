@@ -1,0 +1,12 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.container {
+  @include section-container(white);
+}
+
+.title {
+  @include section-title;
+
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
