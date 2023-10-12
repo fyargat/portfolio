@@ -1,6 +1,8 @@
 @import '@/styles/vars';
 @import '@/styles/mixins';
 
+$header-z-index: 99;
+
 .header {
   @include breakpoint(tablet) {
     position: relative;
@@ -8,9 +10,10 @@
     padding-top: 1rem;
   }
 
-  position: sticky;
-  z-index: 10;
+  position: fixed;
+  z-index: $header-z-index;
   top: 0;
+  right: 0;
   left: 0;
 
   margin: 0 auto;
@@ -178,7 +181,7 @@
 
 .headerDown {
   position: fixed;
-  z-index: 99;
+  z-index: $header-z-index;
   top: 1rem;
   right: 0;
   left: 0;
