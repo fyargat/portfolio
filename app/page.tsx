@@ -1,20 +1,20 @@
-import { Header } from '@/components/Header';
-
 import { AboutScreen } from '@/screens/AboutScreen';
+import { ContactScreen } from '@/screens/ContactScreen';
 import { IntroScreen } from '@/screens/IntroScreen';
 import { ProjectsScreen } from '@/screens/ProjectsScreen';
 import { SkillsScreen } from '@/screens/SkillsScreen';
 
+import styles from './Home.module.scss';
+
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
+      <main className={styles.main}>
         <IntroScreen />
         <ProjectsScreen />
         <AboutScreen />
         <SkillsScreen />
-        <div style={{ height: '100vh', backgroundColor: 'lightblue' }} />
+        <ContactScreen />
       </main>
     </>
   );
