@@ -4,7 +4,7 @@ import cn from 'classnames';
 import { motion } from 'framer-motion';
 import { FC, useState } from 'react';
 
-import { TABLET_BREAKPOINT } from '@/constants';
+import { Screen, TABLET_BREAKPOINT } from '@/constants';
 import { links } from '@/constants/header';
 import { MIN_SCROLL_Y_POSITION, ScrollYDirection } from '@/constants/scroll';
 import { useScreenWidth } from '@/hooks/useScreenWidth';
@@ -27,6 +27,14 @@ export const Header: FC<IProps> = () => {
     scrollY.direction === ScrollYDirection.Top &&
     scrollY.position !== MIN_SCROLL_Y_POSITION;
 
+  const handleScroll = (id: Screen) => () => {
+    const element = document.getElementById(id) as HTMLDivElement;
+
+    element.scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <header
       className={cn(styles.header, {
@@ -44,7 +52,10 @@ export const Header: FC<IProps> = () => {
             <ul className={styles.navList}>
               {links.map((v) => (
                 <li className={styles.navItem} key={v.id}>
-                  <button className={styles.navInteractiveElem}>
+                  <button
+                    onClick={handleScroll(v.value)}
+                    className={styles.navInteractiveElem}
+                  >
                     {v.label}
                   </button>
                 </li>
@@ -71,7 +82,10 @@ export const Header: FC<IProps> = () => {
                     className={styles.navItem}
                     key={v.id}
                   >
-                    <button className={styles.navInteractiveElem}>
+                    <button
+                      onClick={handleScroll(v.value)}
+                      className={styles.navInteractiveElem}
+                    >
                       {v.label}
                     </button>
                   </motion.li>

@@ -5,7 +5,7 @@ import { FC, useRef } from 'react';
 
 import { Project } from '@/components/Project';
 
-import { TABLET_BREAKPOINT } from '@/constants';
+import { Screen, TABLET_BREAKPOINT } from '@/constants';
 import { useScreenWidth } from '@/hooks/useScreenWidth';
 
 import styles from './ProjectsScreen.module.scss';
@@ -26,7 +26,7 @@ export const ProjectsScreen: FC<IProps> = () => {
   const yUp = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   return (
-    <section ref={sectionRef} className={styles.container}>
+    <section id={Screen.Projects} ref={sectionRef} className={styles.container}>
       <div className='wrap'>
         <h2 className={styles.title}>Projects</h2>
 
