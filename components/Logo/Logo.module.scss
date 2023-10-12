@@ -1,22 +1,33 @@
 @import '@/styles/vars';
 @import '@/styles/mixins';
 
-$size: 50px;
+$mobile-size: 36px;
+$desktop-size: 44px;
 
 .container {
   @include flex-center;
 
-  width: $size;
-  height: $size;
+  @include breakpoint(tablet) {
+    width: $desktop-size;
+    height: $desktop-size;
+  }
+
+  width: $mobile-size;
+  height: $mobile-size;
   background-color: var(--color-black);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .iconContainer {
   @include flex-center;
 
-  width: $size / 2;
-  height: $size / 2;
+  @include breakpoint(tablet) {
+    width: $desktop-size / 2;
+    height: $desktop-size/ 2;
+  }
+
+  width: $mobile-size / 2;
+  height: $mobile-size / 2;
 
   svg {
     width: auto;

@@ -26,3 +26,8 @@ export const links = [
     value: Screen.Contact,
   },
 ];
+
+export enum VisibilityStatus {
+  Visible = 'visible',
+  Hide = 'hide',
+}

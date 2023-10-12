@@ -15,6 +15,10 @@ export const Footer: FC<IProps> = () => {
     <footer className={styles.container}>
       <div className='wrap'>
         <div className={styles.wrapper}>
+          <p className={styles.text}>Fyargat Bikbaev · {getCurrentYear()}</p>
+          <div className={styles.logo}>
+            <Logo />
+          </div>
           <p className={cn(styles.text, styles.textCopyright)}>
             <span className={styles.copyright}>
               <Image
@@ -24,12 +28,8 @@ export const Footer: FC<IProps> = () => {
                 alt='copyright'
               />
             </span>
-            Fyargat Bikbaev · {getCurrentYear()}
+            All rights reserved
           </p>
-          <div className={styles.logo}>
-            <Logo />
-          </div>
-          <p className={styles.text}>All rights reserved.</p>
         </div>
       </div>
     </footer>

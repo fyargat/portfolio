@@ -31,9 +31,9 @@
   text-align: center;
 
   &Copyright {
-    display: flex;
+    @include flex-center;
+
     gap: 0.5rem;
-    align-items: center;
   }
 }
 
