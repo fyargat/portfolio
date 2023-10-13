@@ -169,8 +169,8 @@ export const MISCELLANEOUS_SKILLS: Skills = [
 
     {
       id: 8,
-      icon: 'pm2',
-      title: 'PM2',
+      icon: 'storybook',
+      title: 'Storybook',
     },
   ],
   [
