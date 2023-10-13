@@ -1,41 +1,60 @@
 import Image from 'next/image';
 import { FC } from 'react';
 
-import { Chip } from '@/components/Chip';
+import { SkillChip } from '@/components/SkillChip';
+
+import { IProject } from '@/types';
 
 import styles from './Project.module.scss';
 
 interface IProps {
-  image: string;
+  project: IProject;
 }
 
-export const Project: FC<IProps> = ({ image }) => {
+export const Project: FC<IProps> = ({ project }) => {
   return (
     <article className={styles.container}>
       <div className={styles.image}>
         <Image
-          src={image}
+          src={`/images/${project.image}`}
           width={1000}
           height={1000}
-          alt='Project Image'
+          alt={`${project.title} image`}
           draggable={false}
         />
       </div>
-      <h3 className={styles.title}>Title</h3>
-      <p className={styles.text}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, tempore.
-      </p>
+      <h3 className={styles.title}>{project.title}</h3>
+      <p className={styles.text}>{project.description}</p>
       <ul className={styles.list}>
-        <li className={styles.item}>
-          <Chip>React</Chip>
-        </li>
-        <li className={styles.item}>
-          <Chip>Redux</Chip>
-        </li>
-        <li className={styles.item}>
-          <Chip>Sass</Chip>
-        </li>
+        {project.skills.map((skill) => (
+          <li key={skill.id} className={styles.item}>
+            <SkillChip skill={skill} />
+          </li>
+        ))}
       </ul>
+      <div className={styles.links}>
+        {project.codeLink ? (
+          <a
+            className={styles.link}
+            href={project.codeLink}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            GitHub Link
+          </a>
+        ) : null}
+        {project.liveLink.map(({ link, title }) => (
+          <a
+            key={link}
+            className={styles.link}
+            href={link}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {title ?? 'Live Link'}
+          </a>
+        ))}
+      </div>
     </article>
   );
 };
