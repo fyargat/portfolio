@@ -17,6 +17,7 @@ export const PROJECTS: Projects = [
         { id: 3, icon: 'sass', title: 'Sass' },
         { id: 4, icon: 'storybook', title: 'Storybook' },
         { id: 5, icon: 'pinia', title: 'Pinia' },
+        { id: 6, icon: 'docker', title: 'Docker' },
       ],
     },
     {
