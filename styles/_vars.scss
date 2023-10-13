@@ -1,22 +1,18 @@
 // Colors
 
 $white: #fff;
-$white-rgb: 255, 255, 255;
 $lightgrey: #f4f4f4;
 $grey: #bbb;
 $dark-grey: #191919;
 $black: #000;
-$black-rgb: 0, 0, 0;
 
 // Colors map
 $colors: (
   white: $white,
-  white-rgb: $white-rgb,
   lightgrey: $lightgrey,
   grey: $grey,
   dark-grey: $dark-grey,
   black: $black,
-  black-rgb: $black-rgb,
 );
 
 // Breakpoints

@@ -1,15 +1,18 @@
 @import '@/styles/vars';
 @import '@/styles/mixins';
 
+$background-color: #1c1c1c;
+$size: 5rem;
+
 .container {
   @include flex-center;
 
   cursor: move;
 
-  width: 5rem;
-  height: 5rem;
+  width: $size;
+  height: $size;
 
-  background-color: #1c1c1c;
+  background-color: $background-color;
   border-radius: 10px;
   box-shadow:
     6px 6px 12px 0 #181818,
