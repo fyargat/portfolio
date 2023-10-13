@@ -32,7 +32,7 @@ export const Header: FC<IProps> = () => {
         <div className={styles.container}>
           <div className={cn('wrap', styles.wrap)}>
             <div className={cn(styles.logo, styles.logoDesktop)}>
-              <button onClick={onScroll(Screen.Intro)}>
+              <button onClick={onScroll(Screen.Intro)} aria-label='Logo'>
                 <Logo />
               </button>
             </div>
@@ -83,13 +83,17 @@ export const Header: FC<IProps> = () => {
               </nav>
             ) : (
               <div className={cn(styles.logo, styles.logoMobile)}>
-                <button onClick={onScroll(Screen.Intro)}>
+                <button onClick={onScroll(Screen.Intro)} aria-label='Logo'>
                   <Logo />
                 </button>
               </div>
             )}
 
-            <button onClick={toggleMobileMenu} className={styles.menu}>
+            <button
+              onClick={toggleMobileMenu}
+              className={styles.menu}
+              aria-label='Menu'
+            >
               <div className={styles.menuLine} />
               <div className={styles.menuLine} />
               <div className={styles.menuLine} />
