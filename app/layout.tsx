@@ -6,6 +6,8 @@ import { Header } from '@/components/Header';
 
 import '@/styles/index.scss';
 
+import Favicon from '@/public/images/metadata/favicon.ico';
+
 const cabin = Cabin({
   weight: ['400', '500', '700'],
   style: ['normal'],
@@ -15,6 +17,8 @@ const cabin = Cabin({
 
 export const metadata: Metadata = {
   title: 'Fyargat Bikbaev',
+  description: 'Fyargat Bikbaev portfolio',
+  icons: [{ rel: 'icon', type: 'image/x-icon', url: Favicon.src }],
 };
 
 export default function RootLayout({
