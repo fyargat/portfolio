@@ -22,7 +22,7 @@ export const ContactScreen: FC<IProps> = () => {
               <div>
                 <div>
                   <Image
-                    src='/icons/mail.svg'
+                    src='/images/icons/mail.svg'
                     width={50}
                     height={38}
                     alt='mail icon'
@@ -50,7 +50,7 @@ export const ContactScreen: FC<IProps> = () => {
                     rel='noopener noreferrer'
                   >
                     <Image
-                      src='/icons/github.svg'
+                      src='/images/icons/github.svg'
                       width={50}
                       height={50}
                       alt='Github'
@@ -65,7 +65,7 @@ export const ContactScreen: FC<IProps> = () => {
                     rel='noopener noreferrer'
                   >
                     <Image
-                      src='/icons/telegram.svg'
+                      src='/images/icons/telegram.svg'
                       width={50}
                       height={50}
                       alt='Telegram'

@@ -16,7 +16,7 @@ export const Project: FC<IProps> = ({ project }) => {
     <article className={styles.container}>
       <div className={styles.image}>
         <Image
-          src={`/images/${project.image}`}
+          src={`/images/projects/${project.image}`}
           width={1000}
           height={1000}
           alt={`${project.title} image`}

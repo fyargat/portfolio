@@ -24,7 +24,7 @@ export const SkillElement: FC<IProps> = ({ skill, constraintsRef }) => {
         className={styles.container}
       >
         <Image
-          src={`/icons/${skill.icon}.svg`}
+          src={`/images/icons/${skill.icon}.svg`}
           alt={`${skill.title} icon`}
           width={40}
           height={40}

@@ -22,7 +22,7 @@ export const Footer: FC<IProps> = () => {
           <p className={cn(styles.text, styles.textCopyright)}>
             <span className={styles.copyright}>
               <Image
-                src='/icons/copyright.svg'
+                src='/images/icons/copyright.svg'
                 width={20}
                 height={20}
                 alt='copyright'

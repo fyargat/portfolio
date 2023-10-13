@@ -22,7 +22,7 @@ export const SkillChip: FC<IProps> = ({ skill }) => {
       className={styles.container}
     >
       <Image
-        src={`/icons/${skill.icon}.svg`}
+        src={`/images/icons/${skill.icon}.svg`}
         width={16}
         height={16}
         alt={`${skill.title} icon`}
