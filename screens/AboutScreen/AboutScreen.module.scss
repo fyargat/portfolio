@@ -4,9 +4,7 @@
 .container {
   @include section-container(white);
 
-  @include breakpoint(tablet) {
-    min-height: fit-content;
-  }
+  min-height: fit-content;
 }
 
 .wrapper {
@@ -30,6 +28,10 @@
   font-size: clamp(1rem, 3vw, 1.25rem);
   line-height: 1.75;
   text-align: justify;
-  text-indent: 0.5rem;
+  text-indent: 1rem;
   letter-spacing: 0.0125rem;
+}
+
+.link {
+  text-decoration: underline;
 }
