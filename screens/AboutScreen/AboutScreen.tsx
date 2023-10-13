@@ -19,19 +19,20 @@ export const AboutScreen: FC<IProps> = () => {
             <div className={styles.textContainer}>
               <Reveal>
                 <p className={styles.text}>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
-                  excepturi, sed facilis nobis fugiat inventore accusamus
-                  deleniti culpa laborum adipisci nihil repellendus, aliquam
-                  velit labore tempore, a delectus corporis error numquam
-                  incidunt officia odio officiis distinctio? Maxime quis vel
-                  facilis minima reprehenderit, aperiam eos. Deleniti quia
-                  sapiente nostrum culpa reprehenderit qui ullam nobis explicabo
-                  cupiditate iure. Unde, nulla dicta vitae laudantium modi fugit
-                  ea mollitia? Libero alias recusandae cum quo quam odio porro,
-                  veniam iure ex inventore. Veniam quae inventore rerum in
-                  facere reiciendis architecto praesentium est doloribus illo
-                  ratione sint maxime, tempore ad amet quasi voluptatem
-                  exercitationem similique animi.
+                  Hi 👋, I`m Fyargat. I`m a Frontend Developer with experience
+                  in React, NextJS, and Sass development. Two years of work at{' '}
+                  <a
+                    className={styles.link}
+                    href='https://tenderplan.ru/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    Tenderplan
+                  </a>{' '}
+                  helped me become a professional in creating responsive and
+                  creative web applications. Currently, I am freelancing, where
+                  I continue to apply and enhance my skills by creating websites
+                  that combine creative design with high performance.
                 </p>
               </Reveal>
             </div>
@@ -39,13 +40,13 @@ export const AboutScreen: FC<IProps> = () => {
             <div className={styles.textContainer}>
               <Reveal>
                 <p className={styles.text}>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Temporibus, autem! Impedit quidem itaque aliquid possimus
-                  pariatur doloremque ex molestiae ad, minus magni dolores
-                  minima obcaecati dolorem asperiores excepturi harum nihil
-                  neque cumque numquam beatae sapiente nulla cupiditate? Tenetur
-                  quae nostrum totam molestias provident, maiores voluptates?
-                  Officiis voluptates atque dolor nisi!
+                  In addition to frontend development, I am also passionate
+                  about backend development. I actively study NodeJS, NestJS,
+                  and MongoDB to understand the entire structure of web
+                  applications and ensure their quality operation from both
+                  sides. Furthermore, I have experience in creating Telegram
+                  bots 🤖, adding an extra layer of diversity to my knowledge
+                  and skills.{' '}
                 </p>
               </Reveal>
             </div>
@@ -53,13 +54,14 @@ export const AboutScreen: FC<IProps> = () => {
             <div className={styles.textContainer}>
               <Reveal>
                 <p className={styles.text}>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Sapiente ipsum dignissimos doloribus ducimus, atque unde
-                  corrupti cupiditate assumenda voluptatem natus tempore
-                  mollitia similique placeat soluta quis doloremque quisquam
-                  quas molestias! Repellendus illum quos tempora commodi minima
-                  minus dolores error ducimus esse placeat. Quam recusandae,
-                  eligendi unde alias odit explicabo aperiam.
+                  In my work, I value attention to detail and a commitment to
+                  perfection. I believe in the importance of clean code and good
+                  application architecture. My goal is to continue applying new
+                  technologies, learning, and growing as a developer, as well as
+                  creating products that bring value and joy to users. If you
+                  have interesting projects or are looking for a web development
+                  specialist, I am always ready for new challenges and
+                  collaboration. ✉️
                 </p>
               </Reveal>
             </div>
