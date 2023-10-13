@@ -163,8 +163,8 @@ export const MISCELLANEOUS_SKILLS: Skills = [
 
     {
       id: 7,
-      icon: 'webpack',
-      title: 'Webpack',
+      icon: 'chatgpt',
+      title: 'ChatGPT',
     },
 
     {
