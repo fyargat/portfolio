@@ -13,6 +13,7 @@ export interface IProject {
   image: string;
   liveLink: ILink[];
   codeLink?: string;
+  difficulty: number;
   skills: ISkill[];
 }
 

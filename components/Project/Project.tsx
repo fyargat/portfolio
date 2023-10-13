@@ -2,7 +2,9 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 import { SkillChip } from '@/components/SkillChip';
+import { Star } from '@/components/Star';
 
+import { MAX_DIFFICULTY_STARS } from '@/constants';
 import { IProject } from '@/types';
 
 import styles from './Project.module.scss';
@@ -23,7 +25,19 @@ export const Project: FC<IProps> = ({ project }) => {
           draggable={false}
         />
       </div>
-      <h3 className={styles.title}>{project.title}</h3>
+      <div className={styles.head}>
+        <h3 className={styles.title}>{project.title}</h3>
+
+        <div className={styles.stars} title='Difficulty'>
+          {Array(MAX_DIFFICULTY_STARS)
+            .fill('_')
+            .map((_, index) => {
+              const isFill = index + 1 <= project.difficulty;
+
+              return <Star key={index} isFill={isFill} />;
+            })}
+        </div>
+      </div>
       <p className={styles.text}>{project.description}</p>
       <ul className={styles.list}>
         {project.skills.map((skill) => (
