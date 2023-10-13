@@ -6,6 +6,7 @@ import { FC, useRef } from 'react';
 import { Project } from '@/components/Project';
 
 import { Screen, TABLET_BREAKPOINT } from '@/constants';
+import { PROJECTS } from '@/constants/projects';
 import { useScreenWidth } from '@/hooks/useScreenWidth';
 
 import styles from './ProjectsScreen.module.scss';
@@ -31,34 +32,24 @@ export const ProjectsScreen: FC<IProps> = () => {
         <h2 className={styles.title}>Projects</h2>
 
         <div className={styles.projects}>
-          <div className={styles.column}>
-            <motion.ul
-              style={isTablet ? { y: yDown } : { y: 0 }}
-              className={styles.list}
-            >
-              <li className={styles.item}>
-                <Project image='/images/georgia-tech.jpg' />
-              </li>
-              <li className={styles.item}>
-                <Project image='/images/eleanor.jpg' />
-              </li>
-            </motion.ul>
-          </div>
+          {PROJECTS.map((column, index) => {
+            const y = index % 2 == 0 ? yDown : yUp;
 
-          <div className={styles.column}>
-            <motion.ul
-              style={isTablet ? { y: yUp } : { y: 0 }}
-              className={styles.list}
-            >
-              <li className={styles.item}>
-                <Project image='/images/kanban.png' />
-              </li>
-
-              <li className={styles.item}>
-                <Project image='/images/milna.jpg' />
-              </li>
-            </motion.ul>
-          </div>
+            return (
+              <div key={index} className={styles.column}>
+                <motion.ul
+                  style={isTablet ? { y } : { y: 0 }}
+                  className={styles.list}
+                >
+                  {column.map((project) => (
+                    <li className={styles.item} key={project.id}>
+                      <Project project={project} />
+                    </li>
+                  ))}
+                </motion.ul>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
