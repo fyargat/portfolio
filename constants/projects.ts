@@ -10,6 +10,7 @@ export const PROJECTS: Projects = [
       image: 'kanban.jpg',
       liveLink: [{ link: 'http://89.223.120.183:3000' }],
       codeLink: 'https://github.com/fyargat/kanban-task-manager',
+      difficulty: 5,
       skills: [
         { id: 1, icon: 'vue', title: 'Vue' },
         { id: 2, icon: 'nuxt', title: 'Nuxt' },
@@ -26,6 +27,7 @@ export const PROJECTS: Projects = [
       image: 'barley-break.png',
       liveLink: [{ link: 'https://fyargat.github.io/barley-break/' }],
       codeLink: 'https://github.com/fyargat/barley-break',
+      difficulty: 4,
       skills: [
         { id: 1, icon: 'react', title: 'React' },
         { id: 2, icon: 'zustand', title: 'Zustand' },
@@ -41,6 +43,7 @@ export const PROJECTS: Projects = [
       description:
         'Tenderplan is a system for searching tenders, auctions, and government procurement.',
       image: 'tenderplan.png',
+      difficulty: 3,
       liveLink: [
         {
           title: 'Search Page',
@@ -69,6 +72,7 @@ export const PROJECTS: Projects = [
       image: 'rest-countries-api.jpg',
       liveLink: [{ link: 'https://fyargat.github.io/rest-countries-api/' }],
       codeLink: 'https://github.com/fyargat/rest-countries-api',
+      difficulty: 4,
       skills: [
         { id: 1, icon: 'vue', title: 'Vue' },
         { id: 2, icon: 'sass', title: 'Sass' },
