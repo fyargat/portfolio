@@ -4,6 +4,8 @@
 .container {
   @include flex-center;
 
+  cursor: move;
+
   width: 5rem;
   height: 5rem;
 

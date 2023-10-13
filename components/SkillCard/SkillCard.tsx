@@ -13,6 +13,7 @@ interface IProps {
 }
 
 export const SkillCard: FC<IProps> = ({ skills }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const boundingRef = useRef<DOMRect | null>(null);
 
   const handleMouseLeave = () => (boundingRef.current = null);
@@ -34,7 +35,7 @@ export const SkillCard: FC<IProps> = ({ skills }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div ref={containerRef} className={styles.container}>
       <div
         className={styles.innerContainer}
         onMouseLeave={handleMouseLeave}
@@ -44,7 +45,11 @@ export const SkillCard: FC<IProps> = ({ skills }) => {
         {skills.map((row, index) => (
           <div key={index} className={styles.row}>
             {row.map((skill) => (
-              <SkillElement key={skill.id} skill={skill} />
+              <SkillElement
+                key={skill.id}
+                constraintsRef={containerRef}
+                skill={skill}
+              />
             ))}
           </div>
         ))}
