@@ -29,6 +29,7 @@ export const SkillElement: FC<IProps> = ({ skill, constraintsRef }) => {
           width={40}
           height={40}
           draggable={false}
+          loading='lazy'
         />
       </motion.div>
     </>

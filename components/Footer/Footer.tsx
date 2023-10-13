@@ -26,6 +26,7 @@ export const Footer: FC<IProps> = () => {
                 width={20}
                 height={20}
                 alt='copyright'
+                loading='lazy'
               />
             </span>
             All rights reserved

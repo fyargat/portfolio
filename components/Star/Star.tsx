@@ -25,6 +25,7 @@ export const Star: FC<IProps> = ({ isFill }) => {
         height={15}
         alt={`star`}
         draggable={false}
+        loading='lazy'
       />
     </motion.div>
   );

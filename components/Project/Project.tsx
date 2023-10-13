@@ -23,6 +23,7 @@ export const Project: FC<IProps> = ({ project }) => {
           height={1000}
           alt={`${project.title} image`}
           draggable={false}
+          loading='lazy'
         />
       </div>
       <div className={styles.head}>

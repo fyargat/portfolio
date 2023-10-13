@@ -26,6 +26,7 @@ export const ContactScreen: FC<IProps> = () => {
                     width={50}
                     height={38}
                     alt='mail icon'
+                    loading='lazy'
                   />
                 </div>
 
@@ -54,6 +55,7 @@ export const ContactScreen: FC<IProps> = () => {
                       width={50}
                       height={50}
                       alt='Github'
+                      loading='lazy'
                     />
                   </a>
                 </div>
@@ -69,6 +71,7 @@ export const ContactScreen: FC<IProps> = () => {
                       width={50}
                       height={50}
                       alt='Telegram'
+                      loading='lazy'
                     />
                   </a>
                 </div>

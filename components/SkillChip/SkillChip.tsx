@@ -26,6 +26,7 @@ export const SkillChip: FC<IProps> = ({ skill }) => {
         width={16}
         height={16}
         alt={`${skill.title} icon`}
+        loading='lazy'
       />
       <p>{skill.title}</p>
     </motion.div>
