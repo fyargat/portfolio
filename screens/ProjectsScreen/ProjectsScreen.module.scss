@@ -10,7 +10,7 @@
 }
 
 .projects {
-  @include breakpoint(tablet) {
+  @include breakpoint(laptop) {
     grid-gap: clamp(2rem, 4vw, 3rem);
     grid-template-columns: repeat(2, 1fr);
   }
@@ -23,7 +23,7 @@
 .list {
   @include flex-column;
 
-  @include breakpoint(tablet) {
+  @include breakpoint(laptop) {
     gap: clamp(2rem, 4vw, 3rem);
   }
 
