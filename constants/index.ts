@@ -8,3 +8,5 @@ export enum Screen {
   Skills = 'skills',
   Contact = 'contact',
 }
+
+export const MAX_DIFFICULTY_STARS = 5;
