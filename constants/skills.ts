@@ -118,8 +118,8 @@ export const BACKEND_SKILLS: Skills = [
     },
     {
       id: 10,
-      icon: 'prisma',
-      title: 'Prisma',
+      icon: 'rabbitmq',
+      title: 'RabbitMQ',
     },
   ],
 ];
