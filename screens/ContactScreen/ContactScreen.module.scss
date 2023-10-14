@@ -4,7 +4,6 @@
 .container {
   @include section-container(white);
 
-  min-height: fit-content;
   text-align: center;
 }
 
