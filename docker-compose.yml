@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   app:
-    image: ghcr.io/fyargat/portfolio:deploy
+    image: ghcr.io/fyargat/portfolio:latest
     ports:
       - target: 3000
         published: 3000
