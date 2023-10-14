@@ -2,10 +2,10 @@ name: Build & Deploy
 
 on:
   push:
-    # branches:
-    #   - main
-    # tags:
-    #   - v*
+    branches:
+      - main
+    tags:
+      - v*
 
 env:
   IMAGE_NAME: portfolio
@@ -69,5 +69,5 @@ jobs:
 
       - name: Docker stack deploy
         run: |
-          docker pull ghcr.io/fyargat/$IMAGE_NAME:deploy
+          docker pull ghcr.io/fyargat/$IMAGE_NAME:latest
           docker stack deploy -c docker-compose.yml --with-registry-auth portfolio
