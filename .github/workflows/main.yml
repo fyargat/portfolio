@@ -44,30 +44,30 @@ jobs:
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
 
-  # deploy:
-  #   name: Deploy
-  #   needs: build
-  #   runs-on: ubuntu-latest
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
 
-  #   env:
-  #     DOCKER_HOST: "ssh://${{ secrets.USERNAME }}@${{ secrets.HOST }}"
+    env:
+      DOCKER_HOST: 'ssh://${{ secrets.USERNAME }}@${{ secrets.HOST }}'
 
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-  #     - name: SSH
-  #       run: |
-  #         mkdir -p ~/.ssh
-  #         chmod 700 ~/.ssh
-  #         ssh-keyscan ${{ secrets.HOST }} >> ~/.ssh/known_hosts
-  #         echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
-  #         chmod 600 ~/.ssh/id_rsa
+      - name: SSH
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          ssh-keyscan ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
 
-  #     - name: Log in to registry
-  #       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+      - name: Log in to registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
 
-  #     - name: Docker stack deploy
-  #       run: |
-  #         docker pull ghcr.io/fyargat/kanban:latest
-  #         docker stack deploy -c docker-compose.yml --with-registry-auth portfolio
+      - name: Docker stack deploy
+        run: |
+          docker pull ghcr.io/fyargat/kanban:latest
+          docker stack deploy -c docker-compose.yml --with-registry-auth portfolio

@@ -1,11 +1,11 @@
 version: '3.8'
 services:
   app:
-    build:
-      context: ./
-      target: runner
+    image: ghcr.io/fyargat/portfolio:deploy
     ports:
-      - '3000:3000'
+      - target: 3000
+        published: 3000
+        mode: host
     environment:
       NODE_ENV: production
       NEXT_TELEMETRY_DISABLED: 1
