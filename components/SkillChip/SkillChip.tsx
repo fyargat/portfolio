@@ -27,6 +27,7 @@ export const SkillChip: FC<IProps> = ({ skill }) => {
         height={16}
         alt={`${skill.title} icon`}
         loading='lazy'
+        draggable={false}
       />
       <p>{skill.title}</p>
     </motion.div>
