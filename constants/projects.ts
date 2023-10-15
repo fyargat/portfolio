@@ -8,7 +8,7 @@ export const PROJECTS: Projects = [
       description:
         'Fully-functional task management app with a light/dark mode toggle.',
       image: 'kanban.jpg',
-      liveLink: [{ link: 'http://89.223.120.183:3000' }],
+      liveLink: [{ link: 'https://kanban.fyargat.com/' }],
       codeLink: 'https://github.com/fyargat/kanban-task-manager',
       difficulty: 5,
       skills: [
