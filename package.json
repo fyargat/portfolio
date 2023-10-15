@@ -13,7 +13,8 @@
     "lint:style": "stylelint **/*.{css,scss}",
     "lint-staged": "lint-staged",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "classnames": "^2.3.2",
