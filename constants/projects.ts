@@ -7,7 +7,7 @@ export const PROJECTS: Projects = [
       title: 'Kanban Task Management',
       description:
         'Fully-functional task management app with a light/dark mode toggle.',
-      image: 'kanban.jpg',
+      images: ['kanban-1.png', 'kanban-2.png', 'kanban-3.png', 'kanban-4.png'],
       links: [
         {
           title: 'Code',
@@ -27,13 +27,18 @@ export const PROJECTS: Projects = [
         { id: 5, icon: 'pinia', title: 'Pinia' },
         { id: 6, icon: 'docker', title: 'Docker' },
       ],
+      autoPlayDelay: 3900,
     },
     {
       id: 2,
       title: 'Barley Break',
       description:
         'The «Barley Break» is a classic brainteaser where you need to slide numbered tiles on a game board to arrange them in ascending order.',
-      image: 'barley-break.png',
+      images: [
+        'barley-break-1.png',
+        'barley-break-2.png',
+        'barley-break-3.png',
+      ],
       links: [
         {
           title: 'Code',
@@ -51,6 +56,7 @@ export const PROJECTS: Projects = [
         { id: 3, icon: 'typescript', title: 'Typescript' },
         { id: 4, icon: 'sass', title: 'Sass' },
       ],
+      autoPlayDelay: 3800,
     },
   ],
   [
@@ -59,7 +65,14 @@ export const PROJECTS: Projects = [
       title: 'Tenderplan Landing Pages',
       description:
         'Tenderplan is a system for searching tenders, auctions, and government procurement.',
-      image: 'tenderplan.png',
+      images: [
+        'tenderplan-1.png',
+        'tenderplan-2.png',
+        'tenderplan-3.png',
+        'tenderplan-4.png',
+        'tenderplan-5.png',
+        'tenderplan-6.png',
+      ],
       difficulty: 3,
       links: [
         {
@@ -80,13 +93,20 @@ export const PROJECTS: Projects = [
         { id: 2, icon: 'sass', title: 'Sass' },
         { id: 3, icon: 'gsap', title: 'Gsap' },
       ],
+      autoPlayDelay: 4000,
     },
 
     {
       id: 4,
       title: 'REST Countries API',
       description: 'REST Countries API with color theme switcher.',
-      image: 'rest-countries-api.jpg',
+      images: [
+        'rest-countries-api-1.png',
+        'rest-countries-api-2.png',
+        'rest-countries-api-3.png',
+        'rest-countries-api-4.png',
+        'rest-countries-api-5.png',
+      ],
       links: [
         {
           title: 'Code',
@@ -103,6 +123,7 @@ export const PROJECTS: Projects = [
         { id: 2, icon: 'sass', title: 'Sass' },
         { id: 3, icon: 'storybook', title: 'Storybook' },
       ],
+      autoPlayDelay: 4200,
     },
   ],
 ];
