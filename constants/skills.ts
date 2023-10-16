@@ -157,8 +157,8 @@ export const MISCELLANEOUS_SKILLS: Skills = [
   [
     {
       id: 6,
-      icon: 'sentry',
-      title: 'Sentry',
+      icon: 'nginx',
+      title: 'Nginx',
     },
 
     {
