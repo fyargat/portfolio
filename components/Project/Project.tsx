@@ -1,5 +1,6 @@
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { SkillChip } from '@/components/SkillChip';
 import { Star } from '@/components/Star';
@@ -9,23 +10,39 @@ import { IProject } from '@/types';
 
 import styles from './Project.module.scss';
 
+const Slider = dynamic(
+  () => import('@/components/Slider').then((m) => m.Slider),
+  {
+    ssr: false,
+  },
+);
+
 interface IProps {
   project: IProject;
 }
 
 export const Project: FC<IProps> = ({ project }) => {
+  const [isSliderMount, setIsSliderMount] = useState<boolean>(false);
+
   return (
     <article className={styles.container}>
-      <div className={styles.image}>
+      {!isSliderMount ? (
         <Image
-          src={`/images/projects/${project.image}`}
-          width={1000}
-          height={1000}
-          alt={`${project.title} image`}
+          src={`/images/projects/${project.images[0]}`}
+          width={1080}
+          height={608}
+          alt={`image`}
           draggable={false}
           loading='lazy'
         />
-      </div>
+      ) : null}
+
+      <Slider
+        mount={setIsSliderMount}
+        images={project.images}
+        delay={project.autoPlayDelay}
+      />
+
       <div className={styles.head}>
         <h3 className={styles.title}>{project.title}</h3>
 
