@@ -10,10 +10,11 @@ export interface IProject {
   id: number;
   title: string;
   description: string;
-  image: string;
+  images: string[];
   links: ILink[];
   difficulty: number;
   skills: ISkill[];
+  autoPlayDelay: number;
 }
 
 export interface ILink {
