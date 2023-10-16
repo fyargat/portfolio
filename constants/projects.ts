@@ -105,7 +105,6 @@ export const PROJECTS: Projects = [
         'rest-countries-api-2.png',
         'rest-countries-api-3.png',
         'rest-countries-api-4.png',
-        'rest-countries-api-5.png',
       ],
       links: [
         {
