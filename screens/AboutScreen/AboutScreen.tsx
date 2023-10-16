@@ -27,7 +27,7 @@ export const AboutScreen: FC<IProps> = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    Tenderplan
+                    <span>Tenderplan</span>
                   </a>{' '}
                   helped me become a professional in creating responsive and
                   creative web applications. Currently, I am freelancing, where
