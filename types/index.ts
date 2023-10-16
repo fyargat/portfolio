@@ -11,14 +11,13 @@ export interface IProject {
   title: string;
   description: string;
   image: string;
-  liveLink: ILink[];
-  codeLink?: string;
+  links: ILink[];
   difficulty: number;
   skills: ISkill[];
 }
 
 export interface ILink {
-  title?: string;
+  title: string;
   link: string;
 }
 

@@ -48,17 +48,7 @@ export const Project: FC<IProps> = ({ project }) => {
         ))}
       </ul>
       <div className={styles.links}>
-        {project.codeLink ? (
-          <a
-            className={styles.link}
-            href={project.codeLink}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            GitHub Link
-          </a>
-        ) : null}
-        {project.liveLink.map(({ link, title }) => (
+        {project.links.map(({ link, title }) => (
           <a
             key={link}
             className={styles.link}
@@ -66,7 +56,7 @@ export const Project: FC<IProps> = ({ project }) => {
             target='_blank'
             rel='noopener noreferrer'
           >
-            {title ?? 'Live Link'}
+            {title}
           </a>
         ))}
       </div>

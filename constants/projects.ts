@@ -8,8 +8,16 @@ export const PROJECTS: Projects = [
       description:
         'Fully-functional task management app with a light/dark mode toggle.',
       image: 'kanban.jpg',
-      liveLink: [{ link: 'https://kanban.fyargat.com/' }],
-      codeLink: 'https://github.com/fyargat/kanban-task-manager',
+      links: [
+        {
+          title: 'Code',
+          link: 'https://github.com/fyargat/kanban-task-manager',
+        },
+        {
+          title: 'Live',
+          link: 'https://kanban.fyargat.com/',
+        },
+      ],
       difficulty: 5,
       skills: [
         { id: 1, icon: 'vue', title: 'Vue' },
@@ -26,8 +34,16 @@ export const PROJECTS: Projects = [
       description:
         'The «Barley Break» is a classic brainteaser where you need to slide numbered tiles on a game board to arrange them in ascending order.',
       image: 'barley-break.png',
-      liveLink: [{ link: 'https://fyargat.github.io/barley-break/' }],
-      codeLink: 'https://github.com/fyargat/barley-break',
+      links: [
+        {
+          title: 'Code',
+          link: 'https://github.com/fyargat/barley-break',
+        },
+        {
+          title: 'Live',
+          link: 'https://fyargat.github.io/barley-break/',
+        },
+      ],
       difficulty: 4,
       skills: [
         { id: 1, icon: 'react', title: 'React' },
@@ -45,7 +61,7 @@ export const PROJECTS: Projects = [
         'Tenderplan is a system for searching tenders, auctions, and government procurement.',
       image: 'tenderplan.png',
       difficulty: 3,
-      liveLink: [
+      links: [
         {
           title: 'Search Page',
           link: 'https://tenderplan.ru/search',
@@ -71,8 +87,16 @@ export const PROJECTS: Projects = [
       title: 'REST Countries API',
       description: 'REST Countries API with color theme switcher.',
       image: 'rest-countries-api.jpg',
-      liveLink: [{ link: 'https://fyargat.github.io/rest-countries-api/' }],
-      codeLink: 'https://github.com/fyargat/rest-countries-api',
+      links: [
+        {
+          title: 'Code',
+          link: 'https://github.com/fyargat/rest-countries-api',
+        },
+        {
+          title: 'Live',
+          link: 'https://fyargat.github.io/rest-countries-api/',
+        },
+      ],
       difficulty: 4,
       skills: [
         { id: 1, icon: 'vue', title: 'Vue' },
