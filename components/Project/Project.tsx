@@ -3,9 +3,7 @@ import Image from 'next/image';
 import { FC, useState } from 'react';
 
 import { SkillChip } from '@/components/SkillChip';
-import { Star } from '@/components/Star';
 
-import { MAX_DIFFICULTY_STARS } from '@/constants';
 import { IProject } from '@/types';
 
 import styles from './Project.module.scss';
@@ -46,7 +44,7 @@ export const Project: FC<IProps> = ({ project }) => {
       <div className={styles.head}>
         <h3 className={styles.title}>{project.title}</h3>
 
-        <div className={styles.stars} title='Difficulty'>
+        {/* <div className={styles.stars} title='Difficulty'>
           {Array(MAX_DIFFICULTY_STARS)
             .fill('_')
             .map((_, index) => {
@@ -54,7 +52,7 @@ export const Project: FC<IProps> = ({ project }) => {
 
               return <Star key={index} isFill={isFill} />;
             })}
-        </div>
+        </div> */}
       </div>
       <p className={styles.text}>{project.description}</p>
       <ul className={styles.list}>
