@@ -76,16 +76,20 @@ export const PROJECTS: Projects = [
       difficulty: 3,
       links: [
         {
-          title: 'Search Page',
+          title: 'Search',
           link: 'https://tenderplan.ru/search',
         },
         {
-          title: 'Control Page',
+          title: 'Control',
           link: 'https://tenderplan.ru/control',
         },
         {
-          title: 'Prices Page',
+          title: 'Prices',
           link: 'https://tenderplan.ru/rates',
+        },
+        {
+          title: 'Careers',
+          link: 'https://tenderplan.ru/careers',
         },
       ],
       skills: [
@@ -99,7 +103,8 @@ export const PROJECTS: Projects = [
     {
       id: 4,
       title: 'REST Countries API',
-      description: 'REST Countries API with color theme switcher.',
+      description:
+        'The application displays a list of cards with information about different countries, allowing the user to navigate to a detailed page about the selected country. It also includes a theme toggle option.',
       images: [
         'rest-countries-api-1.png',
         'rest-countries-api-2.png',
@@ -108,11 +113,11 @@ export const PROJECTS: Projects = [
       ],
       links: [
         {
-          title: 'Backend Code',
+          title: 'Backend',
           link: 'https://github.com/fyargat/countries_api',
         },
         {
-          title: 'Frontend Code',
+          title: 'Frontend',
           link: 'https://github.com/fyargat/countries_client',
         },
         {
@@ -122,9 +127,13 @@ export const PROJECTS: Projects = [
       ],
       difficulty: 4,
       skills: [
-        { id: 1, icon: 'vue', title: 'Vue' },
+        { id: 1, icon: 'nextjs', title: 'Next' },
         { id: 2, icon: 'sass', title: 'Sass' },
-        { id: 3, icon: 'storybook', title: 'Storybook' },
+        { id: 3, title: 'FSD' },
+        { id: 4, icon: 'nestjs', title: 'Nest' },
+        { id: 5, icon: 'prisma', title: 'Prisma' },
+        { id: 6, icon: 'postgres', title: 'Postgres' },
+        { id: 7, icon: 'swagger', title: 'Swagger' },
       ],
       autoPlayDelay: 4200,
     },

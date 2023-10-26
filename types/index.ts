@@ -1,6 +1,6 @@
 export interface ISkill {
   id: number;
-  icon: string;
+  icon?: string;
   title: string;
 }
 

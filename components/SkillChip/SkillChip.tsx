@@ -21,14 +21,16 @@ export const SkillChip: FC<IProps> = ({ skill }) => {
       dragSnapToOrigin
       className={styles.container}
     >
-      <Image
-        src={`/images/icons/${skill.icon}.svg`}
-        width={16}
-        height={16}
-        alt={`${skill.title} icon`}
-        loading='lazy'
-        draggable={false}
-      />
+      {skill.icon && (
+        <Image
+          src={`/images/icons/${skill.icon}.svg`}
+          width={16}
+          height={16}
+          alt={`${skill.title} icon`}
+          loading='lazy'
+          draggable={false}
+        />
+      )}
       <p>{skill.title}</p>
     </motion.div>
   );
