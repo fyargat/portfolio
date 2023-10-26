@@ -108,12 +108,16 @@ export const PROJECTS: Projects = [
       ],
       links: [
         {
-          title: 'Code',
-          link: 'https://github.com/fyargat/rest-countries-api',
+          title: 'Backend Code',
+          link: 'https://github.com/fyargat/countries_api',
+        },
+        {
+          title: 'Frontend Code',
+          link: 'https://github.com/fyargat/countries_client',
         },
         {
           title: 'Live',
-          link: 'https://fyargat.github.io/rest-countries-api/',
+          link: 'https://countries.fyargat.com/',
         },
       ],
       difficulty: 4,
