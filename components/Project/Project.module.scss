@@ -9,22 +9,14 @@
 
 .head {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
-  justify-content: space-between;
 }
 
 .title {
   @include section-subtitle;
 
   margin-bottom: 0;
-}
-
-.stars {
-  @include flex-center;
-
-  gap: 0.25rem;
 }
 
 .text {

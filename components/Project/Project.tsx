@@ -6,6 +6,7 @@ import { SkillChip } from '@/components/SkillChip';
 
 import { IProject } from '@/types';
 
+import { Star } from '../Star';
 import styles from './Project.module.scss';
 
 const Slider = dynamic(
@@ -21,6 +22,8 @@ interface IProps {
 
 export const Project: FC<IProps> = ({ project }) => {
   const [isSliderMount, setIsSliderMount] = useState<boolean>(false);
+
+  const isDifficulty = project.difficulty === 5;
 
   return (
     <article className={styles.container}>
@@ -42,17 +45,8 @@ export const Project: FC<IProps> = ({ project }) => {
       />
 
       <div className={styles.head}>
+        {isDifficulty && <Star isFill />}
         <h3 className={styles.title}>{project.title}</h3>
-
-        {/* <div className={styles.stars} title='Difficulty'>
-          {Array(MAX_DIFFICULTY_STARS)
-            .fill('_')
-            .map((_, index) => {
-              const isFill = index + 1 <= project.difficulty;
-
-              return <Star key={index} isFill={isFill} />;
-            })}
-        </div> */}
       </div>
       <p className={styles.text}>{project.description}</p>
       <ul className={styles.list}>

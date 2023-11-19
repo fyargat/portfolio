@@ -2,5 +2,23 @@
 @import '@/styles/mixins';
 
 .container {
+  @include breakpoint(tablet) {
+    width: 30px;
+    height: 30px;
+  }
+
   cursor: move;
+  width: 20px;
+  height: 20px;
+
+  > div {
+    position: unset !important;
+  }
+
+  img {
+    position: relative !important;
+    width: 100% !important;
+    height: unset !important;
+    object-fit: contain;
+  }
 }

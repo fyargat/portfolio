@@ -135,7 +135,7 @@ export const PROJECTS: Projects = [
           link: 'https://kanban.fyargat.com/',
         },
       ],
-      difficulty: 5,
+      difficulty: 4,
       skills: [
         { id: 1, icon: 'vue', title: 'Vue' },
         { id: 2, icon: 'nuxt', title: 'Nuxt' },
@@ -159,7 +159,7 @@ export const PROJECTS: Projects = [
         'tenderplan-5.png',
         'tenderplan-6.png',
       ],
-      difficulty: 3,
+      difficulty: 4,
       links: [
         {
           title: 'Search',

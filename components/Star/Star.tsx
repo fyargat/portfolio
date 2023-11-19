@@ -5,10 +5,10 @@ import { FC } from 'react';
 import styles from './Star.module.scss';
 
 interface IProps {
-  isFill: boolean;
+  isFill?: boolean;
 }
 
-export const Star: FC<IProps> = ({ isFill }) => {
+export const Star: FC<IProps> = ({ isFill = false }) => {
   const iconPath = isFill ? 'star-fill.svg' : 'star-outline.svg';
 
   return (
@@ -21,11 +21,9 @@ export const Star: FC<IProps> = ({ isFill }) => {
     >
       <Image
         src={`/images/icons/${iconPath}`}
-        width={15}
-        height={15}
         alt={`star`}
         draggable={false}
-        loading='lazy'
+        layout='fill'
       />
     </motion.div>
   );
