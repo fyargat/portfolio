@@ -4,30 +4,49 @@ export const PROJECTS: Projects = [
   [
     {
       id: 1,
-      title: 'Kanban Task Management',
+      title: 'Link Sharing App | DevLinks',
       description:
-        'Fully-functional task management app with a light/dark mode toggle.',
-      images: ['kanban-1.png', 'kanban-2.png', 'kanban-3.png', 'kanban-4.png'],
+        'DevLinks - your personal assistant for exchanging useful links. With the help of an elegant interface, you can drag, sort, and preview your links, as well as see previews on mobile devices. Now you can easily share your favorite resources, ensuring convenience and efficiency.',
+      images: [
+        'link-sharing-app-1.png',
+        'link-sharing-app-2.png',
+        'link-sharing-app-3.png',
+        'link-sharing-app-4.png',
+        'link-sharing-app-5.png',
+      ],
       links: [
         {
-          title: 'Code',
-          link: 'https://github.com/fyargat/kanban-task-manager',
+          title: 'Backend',
+          link: 'https://github.com/fyargat/link_sharing_app_api',
+        },
+        {
+          title: 'Frontend',
+          link: 'https://github.com/fyargat/link_sharing_app_client',
+        },
+        {
+          title: 'Storybook',
+          link: 'https://storybook--6558d06adebe37cbea392498.chromatic.com',
         },
         {
           title: 'Live',
-          link: 'https://kanban.fyargat.com/',
+          link: 'https://link-sharing-app.fyargat.com/sign-up',
         },
       ],
       difficulty: 5,
       skills: [
-        { id: 1, icon: 'vue', title: 'Vue' },
-        { id: 2, icon: 'nuxt', title: 'Nuxt' },
-        { id: 3, icon: 'sass', title: 'Sass' },
-        { id: 4, icon: 'storybook', title: 'Storybook' },
-        { id: 5, icon: 'pinia', title: 'Pinia' },
-        { id: 6, icon: 'docker', title: 'Docker' },
+        { id: 1, icon: 'nextjs', title: 'Next' },
+        { id: 2, icon: 'sass', title: 'Sass' },
+        { id: 3, title: 'FSD' },
+        { id: 4, icon: 'react-query', title: 'React-Query' },
+        { id: 5, icon: 'react-hook-form', title: 'React-Hook-Form' },
+        { id: 6, title: 'yup' },
+        { id: 7, icon: 'nestjs', title: 'Nest' },
+        { id: 8, icon: 'prisma', title: 'Prisma' },
+        { id: 9, icon: 'postgres', title: 'Postgres' },
+        { id: 10, icon: 'swagger', title: 'Swagger' },
+        { id: 11, icon: 'docker', title: 'Docker' },
       ],
-      autoPlayDelay: 3900,
+      autoPlayDelay: 3800,
     },
     {
       id: 2,
@@ -58,10 +77,77 @@ export const PROJECTS: Projects = [
       ],
       autoPlayDelay: 3800,
     },
+    {
+      id: 3,
+      title: 'Telegram Bot | Outlinet',
+      description:
+        'Outlinet - telegram bot that provides personal VPN keys for the Outline program. Get your key in a single message and set up a secure internet connection. Reliable data protection on your device with minimal effort.',
+      images: [
+        'outlinet-1.png',
+        'outlinet-2.png',
+        'outlinet-3.png',
+        'outlinet-4.png',
+      ],
+      links: [
+        {
+          title: 'Client',
+          link: 'https://gitlab.com/vpn-bot/bot',
+        },
+        {
+          title: 'API',
+          link: 'https://gitlab.com/vpn-bot/api',
+        },
+        {
+          title: 'Admin',
+          link: 'https://gitlab.com/vpn-bot/admin_bot',
+        },
+        {
+          title: 'Live',
+          link: 'https://t.me/outlinet_bot',
+        },
+      ],
+      difficulty: 4,
+      skills: [
+        { id: 1, icon: 'nestjs', title: 'Nest' },
+        { id: 2, icon: 'mongo', title: 'MongoDB' },
+        { id: 3, icon: 'mongoose', title: 'Mongoose' },
+        { id: 4, title: 'nestjs-telegraf' },
+        { id: 5, icon: 'rabbitmq', title: 'RabbitMQ' },
+        { id: 6, title: 'date-fns' },
+      ],
+      autoPlayDelay: 3950,
+    },
   ],
   [
     {
-      id: 3,
+      id: 4,
+      title: 'Kanban Task Management',
+      description:
+        'Task management application providing users with a convenient working environment in both light and dark modes. Easily create, edit, and delete tasks, and switch between themes based on personal preferences.',
+      images: ['kanban-1.png', 'kanban-2.png', 'kanban-3.png', 'kanban-4.png'],
+      links: [
+        {
+          title: 'Code',
+          link: 'https://github.com/fyargat/kanban-task-manager',
+        },
+        {
+          title: 'Live',
+          link: 'https://kanban.fyargat.com/',
+        },
+      ],
+      difficulty: 5,
+      skills: [
+        { id: 1, icon: 'vue', title: 'Vue' },
+        { id: 2, icon: 'nuxt', title: 'Nuxt' },
+        { id: 3, icon: 'sass', title: 'Sass' },
+        { id: 4, icon: 'storybook', title: 'Storybook' },
+        { id: 5, icon: 'pinia', title: 'Pinia' },
+        { id: 6, icon: 'docker', title: 'Docker' },
+      ],
+      autoPlayDelay: 3900,
+    },
+    {
+      id: 5,
       title: 'Tenderplan Landing Pages',
       description:
         'Tenderplan is a system for searching tenders, auctions, and government procurement.',
@@ -101,7 +187,7 @@ export const PROJECTS: Projects = [
     },
 
     {
-      id: 4,
+      id: 6,
       title: 'REST Countries API',
       description:
         'The application displays a list of cards with information about different countries, allowing the user to navigate to a detailed page about the selected country. It also includes a theme toggle option.',
