@@ -29,7 +29,7 @@ export const PROJECTS: Projects = [
         },
         {
           title: 'Live',
-          link: 'https://link-sharing-app.fyargat.com/sign-up',
+          link: 'https://link-sharing-app.fyargat.com',
         },
       ],
       difficulty: 5,
@@ -114,6 +114,7 @@ export const PROJECTS: Projects = [
         { id: 4, title: 'nestjs-telegraf' },
         { id: 5, icon: 'rabbitmq', title: 'RabbitMQ' },
         { id: 6, title: 'date-fns' },
+        { id: 7, icon: 'sentry', title: 'Sentry' },
       ],
       autoPlayDelay: 3950,
     },
