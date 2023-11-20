@@ -1,4 +1,4 @@
-import ym from 'react-yandex-metrika';
+import ym from '@appigram/react-yandex-metrika';
 
 import { enableYM } from '@/providers/yandex-metrika';
 

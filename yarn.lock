@@ -12,6 +12,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@appigram/react-yandex-metrika@npm:^2.8.6":
+  version: 2.8.6
+  resolution: "@appigram/react-yandex-metrika@npm:2.8.6"
+  peerDependencies:
+    react: "*"
+  checksum: 3dd9956e7d03843a6af45f112b748a42d9da1ecf10a6e7e26c7cb2f1a67df03f10028cd0812865d1d69235b9825628fc089676f7c7169b9425d5bd97c37c6686
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.22.13":
   version: 7.22.13
   resolution: "@babel/code-frame@npm:7.22.13"
@@ -4112,6 +4121,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
+    "@appigram/react-yandex-metrika": "npm:^2.8.6"
     "@trivago/prettier-plugin-sort-imports": "npm:^4.2.0"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
@@ -4130,7 +4140,6 @@ __metadata:
     prettier: "npm:^3.0.3"
     react: "npm:^18"
     react-dom: "npm:^18"
-    react-yandex-metrika: "npm:^2.6.0"
     sass: "npm:^1.69.0"
     sharp: "npm:^0.32.6"
     stylelint: "npm:^15.10.3"
@@ -4346,16 +4355,6 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 33977da7a5f1a287936a0c85639fec6ca74f4f15ef1e59a6bc20338fc73dc69555381e211f7a3529b8150a1f71e4225525b41b60b52965bda53ce7d47377ada1
-  languageName: node
-  linkType: hard
-
-"react-yandex-metrika@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "react-yandex-metrika@npm:2.6.0"
-  peerDependencies:
-    prop-types: "*"
-    react: "*"
-  checksum: cf09da4a2deb8e7165a075bc5c9f745ee09c8757f750bf471100491df277634a753674194a01416794826e997857f2a0a7b8d276d89516fadd00c914f2531aa5
   languageName: node
   linkType: hard
 

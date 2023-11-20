@@ -1,8 +1,8 @@
 'use client';
 
+import ym, { YMInitializer } from '@appigram/react-yandex-metrika';
 import { Router } from 'next/router';
 import { PropsWithChildren, useCallback, useEffect } from 'react';
-import ym, { YMInitializer } from 'react-yandex-metrika';
 
 export const enableYM =
   process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_YM_ID;
