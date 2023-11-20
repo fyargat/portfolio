@@ -12,7 +12,6 @@ interface IProps extends PropsWithChildren {
 
 export const YaGoalButton: FC<IProps> = ({ children, goal }) => {
   const handleClick = () => {
-    console.log('click');
     pointYandexGoal(goal);
   };
 
