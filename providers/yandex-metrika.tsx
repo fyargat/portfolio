@@ -4,6 +4,8 @@ import ym, { YMInitializer } from '@appigram/react-yandex-metrika';
 import { Router } from 'next/router';
 import { PropsWithChildren, useCallback, useEffect } from 'react';
 
+console.log('process.env', process.env);
+
 export const enableYM =
   process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_YM_ID;
 
