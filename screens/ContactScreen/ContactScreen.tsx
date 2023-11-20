@@ -1,6 +1,9 @@
+// 'use client';
 import cn from 'classnames';
 import Image from 'next/image';
 import { FC } from 'react';
+
+import { YaGoalButton } from '@/components/YaGoalButton';
 
 import { Screen } from '@/constants';
 
@@ -14,7 +17,6 @@ export const ContactScreen: FC<IProps> = () => {
       <div className='wrap'>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>Contact</h2>
-
           <div className={styles.body}>
             <div className={cn(styles.block, styles.blockMail)}>
               <p className={styles.text}>Write me an e-mail at:</p>
@@ -32,9 +34,14 @@ export const ContactScreen: FC<IProps> = () => {
                 </div>
 
                 <p>
-                  <a className={styles.mail} href='mailto:bikbaevf19@gmail.com'>
-                    bikbaevf19@gmail.com
-                  </a>
+                  <YaGoalButton goal='click_email'>
+                    <a
+                      className={styles.mail}
+                      href='mailto:bikbaevf19@gmail.com'
+                    >
+                      bikbaevf19@gmail.com
+                    </a>
+                  </YaGoalButton>
                 </p>
               </div>
             </div>
@@ -45,38 +52,42 @@ export const ContactScreen: FC<IProps> = () => {
               <p className={styles.text}>Reach me through social media:</p>
               <div className={styles.icons}>
                 <div className={styles.icon}>
-                  <a
-                    className={styles.iconLink}
-                    href='https://github.com/fyargat'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <Image
-                      src='/images/icons/github.svg'
-                      width={50}
-                      height={50}
-                      alt='Github'
-                      loading='lazy'
-                      draggable={false}
-                    />
-                  </a>
+                  <YaGoalButton goal='click_github'>
+                    <a
+                      className={styles.iconLink}
+                      href='https://github.com/fyargat'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <Image
+                        src='/images/icons/github.svg'
+                        width={50}
+                        height={50}
+                        alt='Github'
+                        loading='lazy'
+                        draggable={false}
+                      />
+                    </a>
+                  </YaGoalButton>
                 </div>
                 <div className={styles.icon}>
-                  <a
-                    className={styles.iconLink}
-                    href='https://t.me/fyargat'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <Image
-                      src='/images/icons/telegram.svg'
-                      width={50}
-                      height={50}
-                      alt='Telegram'
-                      loading='lazy'
-                      draggable={false}
-                    />
-                  </a>
+                  <YaGoalButton goal='click_telegram'>
+                    <a
+                      className={styles.iconLink}
+                      href='https://t.me/fyargat'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <Image
+                        src='/images/icons/telegram.svg'
+                        width={50}
+                        height={50}
+                        alt='Telegram'
+                        loading='lazy'
+                        draggable={false}
+                      />
+                    </a>
+                  </YaGoalButton>
                 </div>
               </div>
             </div>

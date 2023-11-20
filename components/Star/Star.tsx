@@ -23,7 +23,7 @@ export const Star: FC<IProps> = ({ isFill = false }) => {
         src={`/images/icons/${iconPath}`}
         alt={`star`}
         draggable={false}
-        layout='fill'
+        fill
       />
     </motion.div>
   );

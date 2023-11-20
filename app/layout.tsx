@@ -6,6 +6,7 @@ import { Header } from '@/components/Header';
 
 import '@/styles/index.scss';
 
+import { AppProvider } from '@/providers';
 import Favicon from '@/public/images/metadata/favicon.ico';
 
 const cabin = Cabin({
@@ -29,9 +30,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={cabin.className}>
-        <Header />
-        {children}
-        <Footer />
+        <AppProvider>
+          <Header />
+          {children}
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   );
